@@ -1,0 +1,26 @@
+version: '3.5'
+
+services:
+  ms1:
+    image: itzg/minecraft-server
+    environment:
+      EULA: "TRUE"
+      ONLINE_MODE: "FALSE"
+    volumes:
+     - ./ms1-data:/data
+
+  ms2:
+    image: itzg/minecraft-server
+    environment:
+      EULA: "TRUE"
+      ONLINE_MODE: "FALSE"
+    volumes:
+     - ./ms2-data:/data
+
+  bungeecord:
+    image: itzg/bungeecord
+    ports:
+      - 25565:25577
+    volumes:
+     - ./server:/server
+

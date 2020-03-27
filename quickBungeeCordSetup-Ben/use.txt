@@ -1,0 +1,2 @@
+Use command "/server" to change server
+
